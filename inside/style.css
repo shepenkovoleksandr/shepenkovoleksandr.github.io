@@ -19,7 +19,12 @@ color:#ff5f00}
 .text6{color:#d42296;
 font-style:italic}
 .text4:hover{color:#ff5f00}
-.text4{color:white}
+.text4{color:white;}
 .text5{color:white}
 .textj:hover{text-decoration: 0;
 color:#ff5f00}
+.textvid{padding-bottom:0.8rem;}
+.border{border: 4px solid lightyellow;
+box-shadow:3px 3px 9px white}
+.border1{border: 5px solid lightgoldenrodyellow;
+box-shadow:3px 4px 10px white}
