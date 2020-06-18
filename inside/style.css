@@ -8,27 +8,54 @@ margin-top:3rem;
 font-size:40px;}
 .text1{color:white;
 }
-.text2{color:greenyellow}
-.fon2{background-image:url(images.jpg);
-    padding-top:2.5rem;}
-.fon1{background-image:url(images.jpg);
-padding:2.4rem;}
+.text2{color:#980000}
+.fon2{background-image:url(fnb.jpg);
+    padding-top:2.5rem;
+background-size:cover;}
+.fon1{background-image:url(136.jpg);
+padding:2.4rem;
+background-size:cover}
 .zxz{margin-left:3rem;
 color:#ff5f00}
-.text3{color:white}
+.text3{color:#980000;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 125px;
+}
 .text6{color:#d42296;
 font-style:italic}
 .text4:hover{color:#ff5f00}
 .text4{color:white;}
-.text5{color:white}
+.text5{color:black;
+padding-top:3rem;
+margin-bottom:5rem}
 .textj:hover{text-decoration: 0;
 color:#ff5f00}
-.textvid{padding-bottom:0.8rem;}
+.textvid{color:#980000}
 .border{border: 4px solid lightyellow;
 box-shadow:3px 3px 9px white}
 .border1{border: 5px solid lightgoldenrodyellow;
 box-shadow:3px 4px 10px white}
-.nomer{color:white;
+.nomer{color:#980000;
 padding-bottom:2rem}
-.cntkt{color:white}
+.cntkt{color:#980000;
+font-style: italic}
+.nomer1{padding-right:15rem;
+color:white;
+padding-bottom:5rem}
+.nmr{margin-bottom:2rem}
+.card{background-image:url(fnb.jpg);
+background-size: cover;}
+.vid1{padding-bottom:5.8rem}
+.vid2{padding-bottom:2.4rem}
+.vvid3{padding-top:3rem}
+.vid3{padding-bottom:3.5rem}
+.fon3{background-image:url(1736.jpg);
+background-size: cover;}
+.vid4{padding-top:1.5rem}
+.text6{color:#980000;
+text-decoration:0;}
+.text6:hover{color:black}
+.ttext{padding-top:6.7rem}
+.teext{margin-top:2rem}
+
 
