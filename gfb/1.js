@@ -3,7 +3,7 @@ window.onload = function () {
     let preloader = document.getElementById('preloader');
     setTimeout(() => {
         preloader.style.display = 'none';
-    }, 000);
+    }, 1000);
 }
 
 // Анимация загрузки
