@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24e14e3299.js" crossorigin="anonymous"></script>
+    <title>SBloG</title>
+    <style>
+        body{
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        }
+        .main{
+            color:black;
+            text-indent: 60px;
+            font-size: 50px;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 3px ;
+            transition: background-size .5s;
+        }
+        .main:hover{
+            background-size: 100% 3px;
+            color: black;
+        }
+        .blog{
+            font-size: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+            text-indent: 20px;
+        }
+        p{
+            text-shadow:0.5px 0.5px 0.2px lightgrey;
+        }
+        .fotos{
+            height: 300px;
+            width: 300px;
+        }
+        .rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+        }
+        .move-top{
+    position: fixed;
+    right: 50px;
+    bottom: 70px;
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    box-shadow: 0 0 10px black;
+    font-weight: 900;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    animation: button-move 1.5s infinite linear;
+}
+.move-top:hover{
+    animation-play-state: paused;
+}
+@keyframes button-move {
+    0%{
+        bottom: 70px;
+    }
+    25%{
+        bottom: 80px
+    }
+    50%{
+        bottom: 90px
+    }
+    75%{
+        bottom: 80px
+    }
+    100%{
+        bottom: 70px
+    }
+}
+/* Прелоадер */
+.preloader-text {
+    background: linear-gradient(to right, yellow, orange, red); /* to right yellow orange red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 5rem;
+    background-size: 300%;
+    animation: anim-preloader  5s infinite;
+}
+.preloader-text >h2{
+    line-height: 0.85;
+}
+.preloader-main-word{
+     font-weight: 900 !important;
+    font-size:3rem; /*ширина текста*/
+}
+@keyframes anim-preloader {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    z-index: 1021;
+    overflow: hidden;
+    background-color: black; /* black */
+    color: white
+}
+.reg {
+    font-size:20px;
+    margin-left: 1000px;
+    background-color: white;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .reg:hover {
+            background: #ccc;
+        }
+        #window {
+            width: 350px; 
+            height: 530px;
+            background: #fff;
+            border: 1px solid #fff;
+            border-radius: 15px;
+            z-index:2;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: 40px auto; /*зовнішній відступ*/
+            transition: opacity 1s 0.2s;
+            opacity: 0;
+        }
+        .close {
+            display:inline-block;
+            margin: 10px 0 0 320px;
+            cursor: pointer;
+            background: #fff;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        .close:hover {
+            background: #ccc;
+        }
+        .form {
+            width: 275px;
+            margin: -15px auto 20px auto;
+            text-align: center;
+        }
+
+        .input {
+            width: 260px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .radio {
+            margin-left: 10px;
+        }
+        #shadow {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: #000;
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <!-- кнопка вверх -->
+<a href="#to-top">
+    <div class="move-top"><h3>Угору</h3></div>
+</a>
+
+<!-- прелоадер -->
+<div id="preloader">
+    <div class="preloader-text">
+        <h2><span class="preloader-main-word"></span>SBloG</h2>
+    </div>
+</div>
+
+<!-- сам блог -->
+<h1><a class="main" id="to-top">SBloG</a><button class="reg">Реєстрація</button></h1>
+<!-- /регестрация/ -->
+<div id=window>
+    <div class="close">
+        <i class="far fa-window-close"></i>
+    </div>
+    <div class="form">
+        <h2>Реєстрація</h2>
+        <form action="main.html" name="fl">
+        <input type="text" required placeholder="Ім'я" name="name1" class="input">
+        <input type="text" required placeholder="Прізвище" name="name2" class="input">
+        <input type="email" required placeholder="e-mail" name="email1" class="input">
+        <input type="email" required placeholder="Підтвердити e-mail" name="email2" class="input">
+        <input type="password" required placeholder="Пароль" name="pass1" class="input">
+        <input type="password" required placeholder="Підтвердити пароль" name="pass2" class="input">
+        <input type="tel" required placeholder="Телефон" name="tel" class="input">
+        <input type="radio" required name="radio1">Чоловік
+        <input type="radio" name="radio11" class="radio">Жінка
+        <input type="submit" value="Зареєструватися" name="sab" class="input">
+        <p>Вже маєте аккаунт?</p>
+        <button class="login">Увійти</button>
+</form>
+    </div>
+</div>
+<p class="blog"><img src="231.jpg" class="fotos rightimg">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ex ratione obcaecati facilis atque alias ullam numquam rem id! Excepturi temporibus aliquam laborum ipsum. Labore beatae reprehenderit velit tenetur nisi repellendus. Illo esse blanditiis inventore incidunt eaque ipsum iste deserunt culpa animi, quaerat aliquid voluptatum similique in et aspernatur sit iure impedit molestias iusto velit, eveniet corporis ipsam? Totam, aliquam nisi impedit asperiores sunt porro dolorum praesentium amet natus quis consequatur deleniti, pariatur suscipit? Fuga tenetur maxime blanditiis voluptatibus, similique recusandae explicabo maiores facere aliquam voluptates nulla, incidunt fugit ea, magni dignissimos debitis quo corrupti. Fugit quasi consequuntur autem ipsam assumenda laboriosam, ipsa facere neque et modi? Magni numquam cum aut nulla at illum perspiciatis, culpa sunt tempora non consequatur atque laborum rerum sint fuga architecto ab, dicta dolore ipsa iure. Autem impedit corrupti voluptates tenetur cum magnam dicta sint eligendi? Quibusdam ducimus sed a quos dolor nostrum earum eum, adipisci similique maiores eius, perferendis provident dolores, est nemo? Ipsum, voluptates veritatis sint vitae provident nemo sequi optio laudantium corrupti tenetur ex. Atque, suscipit ad in distinctio pariatur asperiores? Quis, quod doloribus fugit officia cupiditate perspiciatis quos consectetur quas provident! Aut rem deserunt, distinctio natus nemo quasi, quae, delectus sit obcaecati culpa qui. Recusandae, provident? Beatae rem ullam repellendus cupiditate, libero molestiae repellat amet. Exercitationem libero illum hic quibusdam, perspiciatis modi voluptas adipisci? Hic adipisci minima porro nobis enim, aperiam veniam perspiciatis quidem eveniet architecto maiores ratione consectetur iusto, harum atque esse laboriosam possimus vel ipsum deserunt ducimus, nulla obcaecati?
+</p>
+
+
+<script src="js.js"></script>
+</body>
+</html>
